@@ -1,0 +1,58 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 0 0% 10%;
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 10%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 10%;
+    --primary: 245 42% 51%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 0 0% 96%;
+    --secondary-foreground: 0 0% 10%;
+    --muted: 0 0% 96%;
+    --muted-foreground: 0 0% 45%;
+    --accent: 0 0% 96%;
+    --accent-foreground: 0 0% 10%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 90%;
+    --input: 0 0% 90%;
+    --ring: 245 42% 51%;
+    --radius: 0.75rem;
+    /* Custom Assata Tokens */
+    --assata-purple: #534AB7;
+    --assata-teal: #1D9E75;
+    --assata-coral: #D85A30;
+    --assata-teal-bg: #E6F4F0;
+    --assata-coral-bg: #FBECE8;
+    --assata-purple-bg: #EEEDF8;
+    --assata-amber-bg: #FEF7E6;
+    --assata-pink-bg: #FDF2F8;
+    --assata-blue-bg: #EFF6FF;
+  }
+  body {
+    @apply bg-[#F8F9FA] text-foreground antialiased;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-medium tracking-tight;
+  }
+  .font-serif {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+  }
+}
+@layer components {
+  .flat-card {
+    @apply bg-white border-[0.5px] border-border rounded-[12px] shadow-none overflow-hidden;
+  }
+  .bottom-nav-item {
+    @apply flex flex-col items-center justify-center gap-1 text-[10px] text-muted-foreground transition-colors py-2;
+  }
+  .bottom-nav-item.active {
+    @apply text-primary;
+  }
+}
